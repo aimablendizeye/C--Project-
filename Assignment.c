@@ -17,7 +17,7 @@ int main () {
      printf("Enter the operator number(+,-,*,/, % ):\n");
      scanf(" %c", &operator);
 
-         switch (operator) {
+     switch (operator) {
         case '+':
             result = num1+ num2;
             break;
@@ -30,7 +30,7 @@ int main () {
         case '/':
             result = num1/ num2;
             break;
-        case '%%':
+        case '%':
             result =fmod(num1,num2);
             break;  
             

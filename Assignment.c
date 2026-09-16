@@ -7,6 +7,7 @@ int main () {
     double num2 = 0.0;
     char operator = '\0';
     double result = 0.0 ;
+    char message[100] = "You can't devide by zero";
 
     printf("Enter the first number:");
     scanf("%lf",&num1);
@@ -28,8 +29,15 @@ int main () {
             result = num1*num2;
             break;   
         case '/':
+          if (num2 == 0) {
+            printf("%s\n", message);
+                return 0;
+          }
+          else {
             result = num1/ num2;
             break;
+
+          }  
         case '%':
             result =fmod(num1,num2);
             break;  

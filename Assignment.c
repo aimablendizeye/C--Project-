@@ -5,7 +5,7 @@
 int main () {
     double num1 = 0.0;
     double num2 = 0.0;
-    char operator = '\0';
+    char operator ;
     double result = 0.0 ;
    // char message[100] = "You can't devide by zero";
 
@@ -15,7 +15,7 @@ int main () {
      printf("Enter the second number:"); 
      scanf("%lf",&num2);
 
-     printf("Enter the operator number(+,-,*,/, % ):\n");
+     printf("Enter the operator number(+,-,*,/, %% ):");
      scanf(" %c", &operator);
 
      switch (operator) {

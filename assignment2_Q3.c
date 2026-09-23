@@ -25,9 +25,9 @@ int main () {
    max_num_file = free_storage_mb / file_size;
    remaining_space = fmodf(free_storage_mb, file_size);
 
-   printf("\nStorage in MB: %.2f\n", free_storage_mb);
-   printf("Maxmum file: %d\n", max_num_file);
-   printf("Remaining Space: %.2f\n", remaining_space);
+   printf("\nStorage in MB:\t\t%.2f\n", free_storage_mb);
+   printf("Maxmum file:\t\t%d\n", max_num_file);
+   printf("Remaining Space:\t%.2f\n", remaining_space);
 
 
 

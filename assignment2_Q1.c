@@ -11,7 +11,6 @@ int main() {
     long long shareRWF;
     long long remainderRWF;
 
-    // Input
     printf("Enter total airtime amount (RWF): ");
     scanf("%f", &totalInput);
 
@@ -24,34 +23,20 @@ int main() {
     printf("Enter USD exchange rate (RWF per USD): ");
     scanf("%f", &usdRate);
 
-    // Validate input
+
     if (totalInput < 0 || feePercent < 0 || feePercent > 100 ||
         friends <= 0 || usdRate <= 0) {
         printf("\nInvalid input.\n");
         return 1;
     }
 
-    /*
-     * Convert the floating-point input to integer RWF.
-     * lround() safely rounds to the nearest whole RWF.
-     */
+    
     totalRWF = (long long)lround(totalInput);
-
-    /*
-     * Calculate service fee using integer arithmetic.
-     *
-     * feePercent is a float, so we calculate the fee in cents
-     * of RWF first, then round to the nearest whole RWF.
-     */
+ 
     feeRWF = (long long)lround(totalRWF * feePercent / 100.0);
-
-    // Amount remaining after service fee
+  
     amountAfterFee = totalRWF - feeRWF;
-
-    // Equal share for each friend
     shareRWF = amountAfterFee / friends;
-
-    // Remainder after dividing among friends
     remainderRWF = amountAfterFee % friends;
 
     // Output
@@ -68,7 +53,6 @@ int main() {
     printf("Share per friend in USD:   %.2f USD\n",
            shareRWF / usdRate);
 
-    printf("===================================\n");
 
     return 0;
 }

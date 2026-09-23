@@ -9,6 +9,7 @@ int main () {
          int hours;
          int minutes;
          int seconds;
+         int over_minutes;
 
 
          printf("Enter the total minutes:");
@@ -28,14 +29,11 @@ int main () {
          printf("Seconds :%d seconds \n",seconds);
 
            if (hours > 6) {
-            printf("overtime minutes\n");
+            over_minutes = (total_minutes - 360);
+            printf("overtime minutes : %d\n", over_minutes);
 
-            return 0;
+            return 1;
          }
 
-
-
-
-
-    return 0;
+     return 0;
 }

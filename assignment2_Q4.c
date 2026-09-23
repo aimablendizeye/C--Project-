@@ -32,19 +32,19 @@ int main () {
      }
  
 
-     effective_rate = official_rate - spread_rate;
-     commission_amount = amount * commission_rate / 100;
+     effective_rate = official_rate + spread_rate;
+     commission_amount = amount * (commission_rate / 100);
 
      amount_ramained = amount - commission_amount;
-     amount_USD = amount_ramained /1460;
+     amount_USD = amount_ramained /effective_rate;
 
 
      printf("\n ===========THE FEES======================\n");
 
      printf("\nThe effective rate is :         %.2lf %\n",effective_rate);
-     printf("The commission amount :            %lld Rwf\n",commission_amount);
+     printf("The commission amount :          %lld Rwf\n",commission_amount);
      printf("The amount remained:            %lld Rwf\n",amount_ramained);
-     printf("The amount in USD is :            %.2lf$\n",amount_USD);
+     printf("The amount in USD is :          %.2lf$\n",amount_USD);
      
 
 

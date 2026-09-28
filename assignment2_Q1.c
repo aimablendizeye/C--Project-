@@ -41,6 +41,7 @@ int main() {
 
     // Output
     printf("\n========== AIRTIME SPLIT ==========\n");
+    
     printf("Total amount:              %lld RWF\n", totalRWF);
     printf("Service fee:               %lld RWF\n", feeRWF);
     printf("Amount after fee:          %lld RWF\n", amountAfterFee);

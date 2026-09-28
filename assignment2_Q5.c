@@ -1,11 +1,10 @@
 
 
 #include<stdio.h>
-#include<math.h>
 
 int main () {
 
-         float total_minutes;
+         int total_minutes;
          int hours;
          int minutes;
          int seconds;
@@ -13,10 +12,10 @@ int main () {
 
 
          printf("Enter the total minutes:");
-         scanf("%f",&total_minutes);
+         scanf("%d",&total_minutes);
 
-         hours = (int)total_minutes / 60;
-         minutes = fmod(total_minutes , 60);
+         hours = total_minutes / 60;
+         minutes = total_minutes % 60;
          seconds = total_minutes * 60;
 
         if (minutes <0) {

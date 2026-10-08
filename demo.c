@@ -4,8 +4,17 @@
 # include <math.h>
 # include <stdbool.h>
 
-int main () {
-   
+
+
+//char operator;
+
+
+
+
+
+
+
+
 //   bool is_Student = false;
 
 //   (is_Student == 1)? printf("Yes"): printf("no");
@@ -41,21 +50,22 @@ int main () {
 
 // EX 2
 
-  float temp;
-  float fehne;
+// Temperature conversion 
+
+
+//   float temp;
+//   float fehne;
 
   
-  printf("Enter the temperature in (C):");
-  scanf("%f",&temp);
+//   printf("Enter the temperature in (C):");
+//   scanf("%f",&temp);
 
-  if (temp < 20) {
-     printf("Today it's too cold!");
-     return 1;
-  }
+//   if (temp < 20) {
+//      printf("Today it's too cold!");
+//      return 1;
+//   }
 
-  fehne = temp * 9/5 + 32;
+//   fehne = temp * 9/5 + 32;
 
-  printf("The temperature in fahrenheit : %.2f",fehne);
+//   printf("The temperature in fahrenheit : %.2f",fehne);
 
-   return 0;
-}

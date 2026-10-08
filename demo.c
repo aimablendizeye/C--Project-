@@ -41,34 +41,21 @@ int main () {
 
 // EX 2
 
-int marks;
+  float temp;
+  float fehne;
 
-printf("Enter your marks:");
-scanf("%d",&marks);
+  
+  printf("Enter the temperature in (C):");
+  scanf("%f",&temp);
 
-if (marks < 0 || marks > 100) {
-    printf("Invalid input");
-}
+  if (temp < 20) {
+     printf("Today it's too cold!");
+     return 1;
+  }
 
-else if (marks >=80) {
-    printf("Grade A");
-}
- else if(marks >=70) {
-    printf("Grade B");
-}
- else if (marks >=60) {
-    printf("Grade C");
-}
- else if (marks >=50) {
-    printf("Grade D");
-}
-else {
-    printf("You Failed ,You got only: %d",marks);
-}
+  fehne = temp * 9/5 + 32;
 
+  printf("The temperature in fahrenheit : %.2f",fehne);
 
-
-
-
-
+   return 0;
 }

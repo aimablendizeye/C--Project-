@@ -1,5 +1,3 @@
-
-//    scanf("%c",&operator);
-
- float result = calculator(4,6,"+");
- printf("%f",result)
+if (disability_status != 1 || disability_status !=0) {
+    //     printf("Invalid input");
+    // }

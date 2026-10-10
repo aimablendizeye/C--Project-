@@ -22,7 +22,7 @@ int main () {
           printf("Your balance :%d",initial_balance);
           break;
         case 2:
-          printf("Enter the amount you want to deposit:");
+          printf("Enter the amount you want to deposit:");                                                                                                                
           scanf("%d",&amount);
           result = initial_balance + amount;
           printf("Your new balance :%d",result);

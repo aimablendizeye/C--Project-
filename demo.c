@@ -69,3 +69,25 @@
 
 //   printf("The temperature in fahrenheit : %.2f",fehne);
 
+ int main () {
+
+    int true_password = 1234;
+    int password ;
+    
+
+    while (password != true_password) {
+         for (int i=1; i<=3; i++) {
+             printf("Enter the your Password :");
+             scanf("%d",&password);
+         }
+           
+          // printf("Incorrect password try again!");
+
+           if (password == true_password) {
+            printf("Access granted");
+           }
+           
+    }
+
+    return 0;
+ }

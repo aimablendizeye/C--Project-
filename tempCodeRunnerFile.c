@@ -1,3 +1,6 @@
-if (disability_status != 1 || disability_status !=0) {
-    //     printf("Invalid input");
-    // }
+ // if (scanf("%d", &enteredPin) != 1)
+        // {
+        // //     // user typed letters or something invalid: clear the input buffer
+        //     while (getchar() != '\n');
+        //     enteredPin = -1;   // treat as a wrong PIN
+        // }

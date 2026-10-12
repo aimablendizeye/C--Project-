@@ -19,11 +19,15 @@ int main () {
     
     switch (option){
         case 1:
-          printf("Your balance :%d",initial_balance);
+          printf("Your have this balance :%d",initial_balance);
           break;
         case 2:
           printf("Enter the amount you want to deposit:");                                                                                                                
           scanf("%d",&amount);
+          if(amount <=0) {
+            printf("Invalid deposit amount\n");
+            return 1;
+          }
           result = initial_balance + amount;
           printf("Your new balance :%d",result);
           break;
@@ -31,9 +35,29 @@ int main () {
         case 3: 
           printf("The amount you need to withdraw:");
           scanf ("%d",&amount);  
+
+          if (amount > initial_balance ) {
+            printf("Insufficient Balance");
+
+            return 1;
+
+          }
+          else if(amount <= 0) {
+            printf("Invalid withdrawal amount");
+
+            return 1;
+          }
+
           result = initial_balance - amount;
           printf("Your new balance is :%d",result);
           break;
+
+          case 4:
+                  printf("Good bye");
+                  break;
+          default:
+                  printf ("%d is invalid option",option);
+                  break;        
 
     }
 

@@ -1,39 +1,39 @@
+#include <stdio.h>
 
-#include<stdio.h>
+int main() {
+    int marks;
+    int income;
+    int disability;
 
-int main () {
-    float marks;
-    float monthly_income;
-    int disability_status ;
-
-    printf("Enter the Marks You got (0-100): ");
-    scanf("%f",&marks);
-
-    if (marks <0 || marks >100 ) {
-        printf("Invalid input");
-
+    printf("Enter marks (0-100): ");
+    if (scanf("%d", &marks) != 1) {
+        printf("Invalid input\n");
         return 0;
     }
 
-    printf("Enter the familily income: ");
-    scanf("%f",&monthly_income);
-
-    printf("Enter the disability status (1 if disabled, 0 if not): ");
-    scanf("%d",&disability_status);
-
-    if (disability_status != 1 && disability_status !=0) {
-        printf("Invalid input");
+    printf("Enter family income (RWF): ");
+    if (scanf("%d", &income) != 1) {
+        printf("Invalid input\n");
         return 0;
     }
 
-
-    if(marks >=80 && monthly_income <=300000 ) {
-        printf(" You are Qualified for scholarship");
-    }
-    else {
-        printf("You are not Qualified for scholarship");
+    printf("Enter disability status (1 = disabled, 0 = not): ");
+    if (scanf("%d", &disability) != 1) {
+        printf("Invalid input\n");
+        return 0;
     }
 
+    if (marks < 0 || marks > 100 || income < 0 ||
+        (disability != 0 && disability != 1)) {
+        printf("Invalid input\n");
+        return 0;
+    }
 
-  return 0;
+    if (disability == 1 || (marks >= 80 && income <= 300000)) {
+        printf("Qualified for scholarship\n");
+    } else {
+        printf("Not qualified for scholarship\n");
+    }
+
+    return 0;
 }

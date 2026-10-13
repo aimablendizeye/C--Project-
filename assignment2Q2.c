@@ -1,67 +1,59 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main () {
-
-
-    int initial_balance = 50000;
+int main() {
+    int balance = 50000;
     int amount;
     int option;
-    int result;
+    int running = 1;
 
-    printf("Menu:\n" 
-        "1. Check Balance:\n"
-         "2. Deposit:\n" 
-         "3. Withdraw:\n"
-         "4. Exit\n");
+    while (running) {
+        printf("\nMenu:\n");
+        printf("1. Check Balance\n");
+        printf("2. Deposit\n");
+        printf("3. Withdraw\n");
+        printf("4. Exit\n");
+        printf("Enter your option: ");
+        scanf("%d", &option);
 
-    printf("\nEnter your option:");
-    scanf("%d",&option);
-    
-    switch (option){
-        case 1:
-          printf("Your have this balance :%d",initial_balance);
-          break;
-        case 2:
-          printf("Enter the amount you want to deposit:");                                                                                                                
-          scanf("%d",&amount);
-          if(amount <=0) {
-            printf("Invalid deposit amount\n");
-            return 1;
-          }
-          result = initial_balance + amount;
-          printf("Your new balance :%d",result);
-          break;
+        switch (option) {
+            case 1:
+                printf("Current balance: %d RWF\n", balance);
+                break;
 
-        case 3: 
-          printf("The amount you need to withdraw:");
-          scanf ("%d",&amount);  
+            case 2:
+                printf("Enter deposit amount: ");
+                scanf("%d", &amount);
+                if (amount <= 0) {
+                    printf("Invalid deposit amount\n");
+                } else {
+                    balance += amount;
+                    printf("Updated balance: %d RWF\n", balance);
+                }
+                break;
 
-          if (amount > initial_balance ) {
-            printf("Insufficient Balance");
+            case 3:
+                printf("Enter withdrawal amount: ");
+                scanf("%d", &amount);
+                if (amount <= 0) {
+                    printf("Invalid withdrawal amount\n");
+                } else if (amount > balance) {
+                    printf("Insufficient funds\n");
+                } else {
+                    balance -= amount;
+                    printf("Updated balance: %d RWF\n", balance);
+                }
+                break;
 
-            return 1;
+            case 4:
+                printf("Exit\n");
+                running = 0;
+                break;
 
-          }
-          else if(amount <= 0) {
-            printf("Invalid withdrawal amount");
-
-            return 1;
-          }
-
-          result = initial_balance - amount;
-          printf("Your new balance is :%d",result);
-          break;
-
-          case 4:
-                  printf("Good bye");
-                  break;
-          default:
-                  printf ("%d is invalid option",option);
-                  break;        
-
+            default:
+                printf("Invalid option\n");
+                break;
+        }
     }
-
-
 
     return 0;
 }

@@ -1,18 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int balance = 50000;
+    int balance = 50000;   // starting balance in RWF
+    int option = 0;
     int amount;
-    int option;
-    int running = 1;
 
-    while (running) {
-        printf("\nMenu:\n");
-        printf("1. Check Balance\n");
-        printf("2. Deposit\n");
-        printf("3. Withdraw\n");
-        printf("4. Exit\n");
-        printf("Enter your option: ");
+    while (option != 4) {
+        printf("\nMenu:\n"
+               "1. Check Balance\n"
+               "2. Deposit\n"
+               "3. Withdraw\n"
+               "4. Exit\n");
+        printf("Enter your choice: ");
         scanf("%d", &option);
 
         switch (option) {
@@ -46,7 +45,6 @@ int main() {
 
             case 4:
                 printf("Exit\n");
-                running = 0;
                 break;
 
             default:

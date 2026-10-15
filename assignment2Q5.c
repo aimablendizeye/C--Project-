@@ -14,22 +14,16 @@ int main()
         for (int course = 1; course <= 5; course++)
         {
             int mark;
-            int valid = 0;
+            int valid = 1;
 
-            while (!valid)
+            while (valid)
             {
                 printf("Enter mark for course %d: ", course);
                 int result = scanf("%d", &mark);
 
-                if (result == EOF)
-                {
-                    printf("\nInput ended unexpectedly.\n");
-                    return 1;
-                }
-
-                if (result == 1 && mark >= 0 && mark <= 100)
-                {
-                    valid = 1;
+             
+                if (result == 1 && mark >= 0 && mark <= 100){
+                    valid = 0;
                 }
                 else
                 {

@@ -23,16 +23,19 @@ int main () {
 // }
 
 
- int i = 0;
- while (i<10) {
-    if ( i == 4) {
+ int i ;
+ while (1) {
+    printf("Enter the  number:");
+    scanf("%d",&i);
+
+    if ( i == 0) {
         //i++;
-        continue;
+        break;
         
     }
 
-    printf("%d\n",i);
-    i++;
+    // printf("%d\n",i);
+    // i++;
  }
 
 

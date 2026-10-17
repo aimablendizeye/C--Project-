@@ -6,7 +6,7 @@ int main()
     for (int student = 1; student <= 5; student++)
     {
         int sum = 0;
-        int highest = 0;     // marks are 0-100, so these starting values are safe
+        int highest = 0;    
         int lowest = 100;
 
         printf("\n=== Student %d ===\n", student);
@@ -29,7 +29,7 @@ int main()
                 {
                     printf("Invalid mark. Please enter again.\n");
                     int c;
-                    while ((c = getchar()) != '\n' && c != EOF);   // clear bad input
+                    while ((c = getchar()) != '\n' && c != EOF);   
                 }
             }
 

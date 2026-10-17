@@ -18,13 +18,11 @@ int main()
             printf("Access Granted\n");
             return 0;
         }
-
         attempts++;
         if (attempts < maxAttempts){
             printf("Wrong PIN. %d attempt(s) remaining.\n", maxAttempts - attempts);
         }
     }
-
     printf("Account Locked\n");
     return 0;
 }

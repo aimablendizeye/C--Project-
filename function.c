@@ -45,3 +45,35 @@ int main () {
 
     return 0;
 }
+
+
+float calculator (float a, float b, char operator) {
+  if (operator == '-'){
+    return a - b;
+
+  }
+  else if (operator == '+') {
+    return a + b;
+  }
+  else if (operator == '*') {
+    return a * b;
+  }
+
+  else {
+    return a /b;
+  }
+
+    
+}
+
+
+int main (void) {
+
+
+ float result = calculator(4,6,'+');
+ printf("%f",result);
+
+
+    return 0;
+
+}

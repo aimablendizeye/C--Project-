@@ -2,23 +2,25 @@
 #include<stdio.h>
 
 int main () {
-   int correct_password = 1234;
-   int password;
+  int a, b, max1, max2;
+  printf("Enter the first numbers:");
+  scanf("%d",&a);
+  printf("Enter second number:");
+  scanf("%d",&b);
+
+  max1 = (a > b)? a : b;
+
+  if (a == b) 
+    max2 = a;
+
+ else 
+   max2 = b;
+
+  printf("Using Ternary max1 is: %d\n",max1);
+  printf("Using if statement max2 is: %d",max2);
 
 
-   while (password != correct_password) {
-    printf("Enter the password:");
-    scanf("%d",&password);
 
-    for (int attempt=1; attempt<=3; attempt++) {
-        if(password != correct_password) {
-            printf("Incorrect password . you have %d left",attempt);
-        }
-        else {
-            printf ("Access granted");
-        }
-    }
-   }
 
     return 0;
 }

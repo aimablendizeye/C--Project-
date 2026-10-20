@@ -113,21 +113,24 @@ int main () {
 //  Accepting user input of different elements 
 
 
-//   int marks [4]; 
-//   int i;
+  int marks [4]; 
+  int i;
 
-//   for ( i=0; i<4; i++) {
-//     printf("Enter the marks:");
-//     scanf("%d",&marks[i]);
-//   }
+  for ( i=0; i<4; i++) {
+    printf("Enter the marks:");
+    scanf("%d",&marks[i]);
+  }
 
-//   printf("The marks Entered are:\n");
+  printf("The marks Entered are:\n");
 
-//   for (i =0; i<4; i++) {
-//       printf("%d\n",marks[i]);
-//   }
+  for (i =0; i<4; i++) {
+      printf("%d\n",marks[i]);
+  }
 
- 
+
+
+ // 1D Array 
+ // Calculate the large and smallest 
 
 
   int marks [4] = {40,49,70,70};
@@ -150,11 +153,79 @@ int main () {
   printf("smallest marks:%d\n",min);
 
 
+
+
+
+// calculate the Total of elements inside an array;
+
+
+
+int arr[] = {4,5,6,7,8,9};
+
+int total = 0;
+
+int n = sizeof(arr) / sizeof(arr[0]);
+
+for (int i=0; i<n; i++) {
+    total +=arr[i];
+}
+
+printf("Total of all Elements : %d", total);
   
 
 
 
-    return 0;
+// 2 D Array 
+
+
+
+ int matrix [2][3];
+
+ for (int i=0; i<2; i++){
+    for (int j=0; j<3; j++) {
+
+        printf("Enter the number:");
+        scanf ("%d",&matrix[i][j]);
+      
+    }
+ }
+
+ printf("\n Matrix\n");
+
+ for (int i=0; i<2; i++) {
+    for (int j=0; j<3; j++) {
+
+        printf("%d",matrix[i][j]);
+    }
+    printf("\n");
+ }
+
+
+
+
+// 3D Array in C 
+
+    int layer [1][2][2] = {
+        {{1,2},{4,5}}
+    };
+
+    for (int i=0; i<1; i++) {
+        printf("layer %d\n",i+1);
+
+        for (int j=0; j<2; j++){
+
+            for (int k=0; k<2; k++) {
+                printf("%d",layer[i][j][k]);
+            }
+            printf("\n");
+        }
+        
+    }
+
+    
+   
+
+ return 0;
 }
 
 

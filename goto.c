@@ -48,24 +48,23 @@ int main () {
 
 
 
-    int number;
+ int nums;
 
-    printf("Enter a number: ");
-    scanf("%d", &number);
+ printf("Enter the numbers:");
+ scanf("%d",&nums);
 
-    if (number % 2 == 0) {
-        goto even;
-    }
+ if (nums %2 ==0) {
+    goto even;
+ }
+ goto odd;
 
-    goto odd;
 
-even:
-    printf("Number is even\n");
-    return 0;
+ even:
+    printf("%d is even",nums);
 
-odd:
-    printf("Number is odd\n");
-
+odd: 
+   printf("%d is odd",nums);
+       
     return 0;
 }
 

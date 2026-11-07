@@ -29,15 +29,22 @@
 
 
 
-float toCelcius (float temp) {
-    return temp * 9/5 + 32;
+float average (int arr[] , int size) {
+    int total = 0;
+    for ( int i=0; i<size; i++) {
+        total += arr[i];
+        
+    }
+    return total /size ;
 } 
 
 int main () {
 
-    float result = toCelcius(94.3);
+    int array [5] = {3,5,6,7,8};
+    float result = average(array,5);
 
-    printf("%.2f",result);
+    printf("average is : %.2f",result);
+    
 
 
 

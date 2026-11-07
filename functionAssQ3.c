@@ -5,20 +5,19 @@
 #define SIZE 8
 #define LOW_LIMIT 5
 
-/* Function prototypes */
+
 void inputStock(int arr[], int size);
 int  totalStock(int arr[], int size);
 void findLowStock(int arr[], int size);
 void sortStock(int arr[], int size);
 void updateStock(int *item);
 
-/* Helpers */
+
 int  countLowStock(int arr[], int size);
 int  readInt(int *value);
 void displayStock(int arr[], int size);
 
-/* Reads one integer safely. Returns 1 on success, 0 on bad input.
-   Exits the program if input ends (EOF). */
+
 int readInt(int *value)
 {
     int c;
@@ -29,7 +28,7 @@ int readInt(int *value)
         printf("\nInput ended unexpectedly. Exiting.\n");
         exit(1);
     }
-    /* discard the invalid line */
+    
     while ((c = getchar()) != '\n' && c != EOF)
         ;
     return 0;
@@ -60,7 +59,7 @@ int totalStock(int arr[], int size)
     return total;
 }
 
-/* Counts items with stock less than LOW_LIMIT */
+
 int countLowStock(int arr[], int size)
 {
     int i, count = 0;
@@ -70,7 +69,7 @@ int countLowStock(int arr[], int size)
     return count;
 }
 
-/* Lists low-stock items and prints the all/none messages */
+
 void findLowStock(int arr[], int size)
 {
     int i;
@@ -88,7 +87,7 @@ void findLowStock(int arr[], int size)
     }
 }
 
-/* Bubble sort, ascending order */
+
 void sortStock(int arr[], int size)
 {
     int i, j, temp;
@@ -103,7 +102,7 @@ void sortStock(int arr[], int size)
     }
 }
 
-/* Updates one item through its address; rejects negative values */
+
 void updateStock(int *item)
 {
     int newValue;
@@ -142,8 +141,7 @@ int main(void)
     printf("Total stock: %d\n", totalStock(stock, SIZE));
     findLowStock(stock, SIZE);
 
-    /* Choose which product to update (before sorting, so the index
-       refers to the product numbers used during input) */
+    
     while (1) {
         printf("\nChoose a product index to update (1-%d): ", SIZE);
         if (!readInt(&choice)) {

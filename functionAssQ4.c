@@ -35,7 +35,7 @@ void analyze(char *str, int *v, int *c, int *d, int *s)
     }
 }
 
-/* Reverses the string in place using two pointers. */
+
 void reverse(char *str)
 {
     char *start = str;
@@ -58,8 +58,7 @@ void reverse(char *str)
     }
 }
 
-/* Returns 1 if palindrome (ignoring spaces and case), else 0.
-   Does not modify the string. */
+
 int isPalindrome(char *str)
 {
     char *left = str;
@@ -104,7 +103,7 @@ int main(void)
         return 1;
     }
 
-    /* Remove trailing newline left by fgets() */
+   
     nl = strchr(input, '\n');
     if (nl != NULL)
         *nl = '\0';
@@ -115,7 +114,7 @@ int main(void)
     printf("Digits             : %d\n", digits);
     printf("Special characters : %d\n", specials);
 
-    /* Reverse a copy so the original stays intact */
+    
     strcpy(reversed, input);
     reverse(reversed);
     printf("\nOriginal : %s\n", input);

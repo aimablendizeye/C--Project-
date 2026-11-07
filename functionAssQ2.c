@@ -17,7 +17,7 @@ void withdraw(int *balance, int amount)
         return;
     }
 
-    *balance = *balance - amount;   /* modifies the original variable in main() */
+    *balance = *balance - amount;   
 
     printf("Withdrawal amount: %d\n", amount);
     printf("New balance: %d\n", *balance);
@@ -29,7 +29,7 @@ void withdraw(int *balance, int amount)
 
 int main(void)
 {
-    int balance = 1000;             /* initial account balance */
+    int balance = 1000;            
     int amount;
     int before;
     int successCount = 0;
@@ -47,17 +47,18 @@ int main(void)
 
         printf("Enter withdrawal amount: ");
         if (scanf("%d", &amount) != 1) {
-            /* non-numeric input: discard the rest of the line, count as invalid */
+            
             int ch;
             while ((ch = getchar()) != '\n' && ch != EOF) {
             }
             printf("Rejected: invalid input.\n");
+            
             invalidInRow++;
         } else {
             before = balance;
-            withdraw(&balance, amount);   /* pass the address of balance */
+            withdraw(&balance, amount);   
 
-            if (balance != before) {      /* balance changed => success */
+            if (balance != before) {     
                 successCount++;
                 totalWithdrawn += before - balance;
                 invalidInRow = 0;

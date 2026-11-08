@@ -1,7 +1,8 @@
 #include<stdio.h>
 
+// Q 1 For entering students marks and finding the total; 
 
-#define SIZE  5;
+int size = 5;
 
 void input (int arr[],int size) {
 

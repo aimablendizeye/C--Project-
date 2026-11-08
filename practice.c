@@ -20,14 +20,24 @@ int main () {
 //   printf("Using if statement max2 is: %d",max2);
 
 
-int num;
- float fnum;
- printf("Enter an integer and a floating-point number: ");
- scanf("%d %f", &num, &fnum);
- printf("You entered %d and %.3f\n", num, fnum);
+// int num;
+//  float fnum;
+//  printf("Enter an integer and a floating-point number: ");
+//  scanf("%d %f", &num, &fnum);
+//  printf("You entered %d and %.3f\n", num, fnum);
 
 
-
-
-    return 0;
+int i=0;
+ while(i<10) {
+  
+  if(i== 4) {
+    i++;
+    continue;
+     printf("%d\n",i);
+     i++;
+    
+  }
+      
+ }
+   return 0;
 }

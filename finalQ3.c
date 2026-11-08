@@ -52,7 +52,7 @@ else{
 }
 
 printf ("\nEnter the Payment Method :");
-scanf("%c ",& payment_method);
+scanf(" %c",&payment_method);
 
 switch (payment_method)
 {

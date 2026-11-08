@@ -3,8 +3,7 @@
 
 int main()
 {
-    for (int student = 1; student <= 5; student++)
-    {
+    for (int student = 1; student <= 5; student++){
         int sum = 0;
         int highest = 0;    
         int lowest = 100;
@@ -16,8 +15,8 @@ int main()
             int mark;
             int valid = 1;
 
-            while (valid)
-            {
+            while (valid){
+                
                 printf("Enter mark for course %d: ", course);
                 int result = scanf("%d", &mark);
 

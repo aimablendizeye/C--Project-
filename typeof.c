@@ -83,6 +83,7 @@ void inputPayment(Payment *p) {
             printf("Enter account number: ");
             fgets(p->detail.accountNumber, sizeof(p->detail.accountNumber), stdin);
             len = strlen(p->detail.accountNumber);
+            
             if (len > 0 && p->detail.accountNumber[len - 1] == '\n') {
                 p->detail.accountNumber[len - 1] = '\0';
             }
